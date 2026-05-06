@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dIEt1UN51Mc=",
+  "dgSpecHash": "fK8D3wqhW/g=",
   "success": true,
-  "projectFilePath": "D:\\UTP\\IntegradorII\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
+  "projectFilePath": "D:\\UTP\\IntegradorII\\listo-backend\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luisa\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\luisa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

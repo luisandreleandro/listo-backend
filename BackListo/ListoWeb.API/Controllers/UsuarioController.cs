@@ -37,8 +37,31 @@ namespace ListoAPI.API.Controllers
         }
 
 
+        [AllowAnonymous] // Permite entrar sin token, ideal para el registro público
+        [HttpPost("registrarCliente")]
+        public async Task<IActionResult> RegistrarCliente([FromBody] RegistroClienteDTO pItem)
+        {
+    
+            if (pItem == null)
+            {
+                return BadRequest(new ResponseCommonDTO { success = false, message = "Los datos del cliente son nulos." });
+            }
+
+            var resultado = await _usuarioRepository.RegisterClientAsync(pItem);
+
+            if (resultado.success)
+            {
+                return Ok(resultado); 
+            }
+            
+            return BadRequest(resultado);
+        }
+
+
+
+
         [AllowAnonymous] // Permite entrar sin token
-        [HttpPost("registrar")]
+        [HttpPost("crearUsuario")]
         public async Task<IActionResult> RegistrarUsuario([FromBody] UsuarioDTO pItem)
         {
         
