@@ -6,6 +6,7 @@ namespace ListoAPI.Aplication.Core.Interfaces
     {
 
         Task<List<UsuarioDTO>> getList(string pSearch = "");
+        Task<ResponseCommonDTO> RegisterClientAsync(RegistroClienteDTO pItem);
         Task<List<UsuarioDTO>> getInactivosList(string pSearch = "");
         Task<UsuarioDTO> getById(int pId);
         Task<ResponseCommonDTO> updateItem(UsuarioDTO pItem);
