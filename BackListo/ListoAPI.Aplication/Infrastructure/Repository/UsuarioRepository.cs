@@ -28,6 +28,57 @@ namespace ListoAPI.Aplication.Infrastructure.Repository
         }
 
 
+        public async Task<(List<UsuarioDTO> usuarios, int TotalCount)> GetUsuarioList(
+    int pageNumber = 1,
+    int pageSize = 10,
+    string pSearch = "",
+    int idRol = 0
+)
+        {
+            try
+            {
+                pSearch = pSearch?.Trim().ToLower();
+                var query = from u in _context.USUARIO
+                            join r in _context.ROL on u.IdRol equals r.IdRol
+                            where u.Estado == true 
+                            select new UsuarioDTO
+                            {
+                                IDUsuario = u.IdUsuario, 
+                                Estado = u.Estado,
+                                Nombre = u.Nombre,
+                                Correo = u.Correo,
+                                Telefono = u.Telefono,
+                                IdRol = u.IdRol,
+                                Rol = r.Nombre 
+                                                     
+                            };
+
+                if (idRol > 0)
+                {
+                    query = query.Where(x => x.IdRol == idRol);
+                }
+                if (!string.IsNullOrEmpty(pSearch))
+                {
+                    query = query.Where(x => x.Nombre.ToLower().Contains(pSearch) ||
+                                             x.Correo.ToLower().Contains(pSearch));
+                }
+
+                var totalCount = await query.CountAsync();
+                var usuarios = await query
+                    .OrderBy(u => u.Nombre)
+                    .Skip((pageNumber - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                return (usuarios, totalCount);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en GetUsuarioList: {ex.Message}");
+                return (new List<UsuarioDTO>(), 0);
+            }
+        }
+
 
         public async Task<ResponseCommonDTO> saveItem(UsuarioDTO pItem)
         {
@@ -187,11 +238,6 @@ namespace ListoAPI.Aplication.Infrastructure.Repository
         }
 
         public Task<List<UsuarioDTO>> getInactivosList(string pSearch = "")
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<UsuarioDTO>> getList(string pSearch = "")
         {
             throw new NotImplementedException();
         }

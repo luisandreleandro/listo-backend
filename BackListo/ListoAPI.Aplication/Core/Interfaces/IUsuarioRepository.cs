@@ -5,7 +5,6 @@ namespace ListoAPI.Aplication.Core.Interfaces
     public interface IUsuarioRepository
     {
 
-        Task<List<UsuarioDTO>> getList(string pSearch = "");
         Task<ResponseCommonDTO> RegisterClientAsync(RegistroClienteDTO pItem);
         Task<List<UsuarioDTO>> getInactivosList(string pSearch = "");
         Task<UsuarioDTO> getById(int pId);
@@ -14,5 +13,7 @@ namespace ListoAPI.Aplication.Core.Interfaces
         Task<ResponseCommonDTO> saveItem(UsuarioDTO pItem);
         Task<ResponseCommonDTO> RecuperarUsuario(int pId);
         Task<ResponseCommonDTO> ValidarLogin(string correo, string password);
+
+        Task<(List<UsuarioDTO> usuarios, int TotalCount)> GetUsuarioList(int pageNumber, int pageSize, string pSearch, int idRol);
     }
 }
