@@ -1629,40 +1629,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luisa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UTP\\IntegradorII\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\listo-backend\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
       "projectName": "ListoAPI.API",
-      "projectPath": "D:\\UTP\\IntegradorII\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
-      "packagesPath": "C:\\Users\\luisa\\.nuget\\packages\\",
-      "outputPath": "D:\\UTP\\IntegradorII\\BackListo\\ListoWeb.API\\obj\\",
+      "projectPath": "C:\\Users\\Lenovo\\listo-backend\\BackListo\\ListoWeb.API\\ListoAPI.API.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lenovo\\listo-backend\\BackListo\\ListoWeb.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\luisa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\UTP\\IntegradorII\\BackListo\\ListoAPI.Aplication\\ListoAPI.Aplication.csproj": {
-              "projectPath": "D:\\UTP\\IntegradorII\\BackListo\\ListoAPI.Aplication\\ListoAPI.Aplication.csproj"
+            "C:\\Users\\Lenovo\\listo-backend\\BackListo\\ListoAPI.Aplication\\ListoAPI.Aplication.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\listo-backend\\BackListo\\ListoAPI.Aplication\\ListoAPI.Aplication.csproj"
             }
           }
         }
@@ -1676,8 +1668,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1715,7 +1706,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.419/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
